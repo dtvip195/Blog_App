@@ -1,0 +1,25 @@
+<% @new_post.each_with_index do |n| %>
+  <div style="padding-bottom: 15px">
+    <div class="card">
+      <div class="container" style="padding-top: 15px">
+        <%= link_to "#", class: "card" do %>
+          <%= image_tag "#{n.image}", class: "card w-100" %>
+        <% end %>
+      </div>
+      <div class="container" style="padding-top: 15px">
+        <div class="row">
+          <div class="col-sm-9">
+            <%= link_to "#", class: "" do %>
+              <h5><%= n.title %></h1>
+            <% end %>
+            <p><%= n.content %></p>
+          </div>
+          <div class="col-sm-3">
+            <p><%= time_ago_in_words(n.created_at) %> trước</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+

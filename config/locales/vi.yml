@@ -1,0 +1,6 @@
+vi:
+  base_title: "Blog App"
+
+  static_pages:
+    home:
+      title: "hello world"
