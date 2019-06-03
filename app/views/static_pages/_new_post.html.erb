@@ -1,15 +1,15 @@
-<% @new_post.each_with_index do |n| %>
-  <div style="padding-bottom: 15px">
+<% @new_post.each do |n| %>
+  <div class="padding-bottom-div">
     <div class="card">
-      <div class="container" style="padding-top: 15px">
-        <%= link_to "#", class: "card" do %>
+      <div class="container padding-top-div">
+        <%= link_to post_path(n), class: "card" do %>
           <%= image_tag "#{n.image}", class: "card w-100" %>
         <% end %>
       </div>
-      <div class="container" style="padding-top: 15px">
+      <div class="container padding-top-div">
         <div class="row">
           <div class="col-sm-9">
-            <%= link_to "#", class: "" do %>
+            <%= link_to post_path(n), class: "" do %>
               <h5><%= n.title %></h1>
             <% end %>
             <p><%= n.content %></p>

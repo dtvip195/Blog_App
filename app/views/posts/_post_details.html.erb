@@ -1,0 +1,21 @@
+<div class="padding-bottom-div">
+  <div class="card">
+    <div class="container padding-top-div">
+      <%= image_tag "#{@post_details.image}", class: "card w-100" %>
+    </div>
+    <div class="container padding-top-div">
+      <div class="row">
+        <div class="col-sm-9">
+          <h5><%= @post_details.title %></h1>
+          <p><%= @post_details.content %></p>
+        </div>
+        <div class="col-sm-3">
+          <p>Đăng <%= time_ago_in_words(@post_details.created_at) %> trước.</p>
+          <p><%= @post_details.views %> lượt xem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

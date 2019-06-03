@@ -5,6 +5,7 @@ ruby "2.5.3"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", "~> 4.3.1"
+gem "bootstrap-will_paginate"
 gem "coffee-rails", "~> 4.2"
 gem "devise"
 gem "faker", "~> 1.6", ">= 1.6.3"
@@ -22,6 +23,7 @@ gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
