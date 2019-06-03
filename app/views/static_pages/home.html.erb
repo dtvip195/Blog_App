@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="container-home">
+    <div class="row">
+      <div class="col-sm-8">
+        <%= render "new_post" %>
+      </div>
+      <div class="col-sm-4">
+        <div style="padding-bottom: 15px">
+          <div class="card">
+            <div class="container">
+              <div class="title">
+                <h2>About Me</h2>
+              </div>
+              <%= link_to "#", class: "" do %>
+                <%= image_tag "viet-nam.jpg", class: "card w-100" %>
+              <% end %>
+              <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-bottom: 15px">
+          <div class="card">
+            <div class="container">
+              <div class="title">
+                <h3>Follow Me</h3>
+              </div>
+              <p>Some text..</p>
+            </div>
+          </div>
+        </div>
+        <div style="padding-bottom: 15px">
+          <div class="card">
+            <div class="container">
+              <div class="title">
+                <h3>Top Post</h3>
+              </div>
+              <%= render "top_post" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

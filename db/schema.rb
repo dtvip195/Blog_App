@@ -34,10 +34,12 @@ ActiveRecord::Schema.define(version: 2019_05_27_085247) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string "title"
     t.text "content"
     t.string "image"
     t.integer "status", default: 0, null: false
     t.integer "topic_id"
+    t.integer "views", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
