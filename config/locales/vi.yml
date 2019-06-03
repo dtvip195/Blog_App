@@ -1,6 +1,7 @@
 vi:
   base_title: "Blog App"
+  about_me: "About Me"
+  about_me_details: "Xin chào các bạn đây là Blog của tui. Tui là Tad"
+  follow_me: "Follow Me"
+  top_post: "Top Post"
 
-  static_pages:
-    home:
-      title: "hello world"
