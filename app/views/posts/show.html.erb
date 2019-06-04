@@ -5,37 +5,39 @@
         <%= render "post_details" %>
       </div>
       <div class="col-sm-4">
-        <div class="padding-bottom-div">
-          <div class="card">
-            <div class="container">
-              <div class="title">
-                <h2><%= t "about_me" %></h2>
-              </div>
-              <%= link_to "#", class: "" do %>
-                <%= image_tag "viet-nam.jpg", class: "card w-100" %>
-              <% end %>
-              <p><%= t"about_me_details" %></p>
+        <div class="card my-4">
+          <h5 class="card-header"><%= t "search" %></h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Search</button>
+              </span>
             </div>
           </div>
         </div>
-        <div class="padding-bottom-div">
-          <div class="card">
-            <div class="container">
-              <div class="title">
-                <h3><%= t "follow_me" %></h3>
-              </div>
-              <p>Some text..</p>
-            </div>
+
+        <div class="card my-4">
+          <h5 class="card-header"><%= t "about_me" %></h5>
+          <div class="card-body">
+            <%= link_to "#", class: "" do %>
+              <%= image_tag "viet-nam.jpg", class: "card w-100" %>
+            <% end %>
+            <p><%= t"about_me_details" %></p>
           </div>
         </div>
-        <div class="padding-bottom-div">
-          <div class="card">
-            <div class="container">
-              <div class="title">
-                <h3><%= t "top_post" %></h3>
-              </div>
-              <%= render "static_pages/top_post" %>
-            </div>
+
+        <div class="card my-4">
+          <h5 class="card-header"><%= t "follow_me" %></h5>
+          <div class="card-body">
+            <p>Some text..</p>
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <h5 class="card-header"><%= t "top_post" %></h5>
+          <div class="card-body">
+            <%= render "static_pages/top_post" %>
           </div>
         </div>
       </div>

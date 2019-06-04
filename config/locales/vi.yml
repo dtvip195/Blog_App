@@ -4,4 +4,14 @@ vi:
   about_me_details: "Xin chào các bạn đây là Blog của tui. Tui là Tad"
   follow_me: "Follow Me"
   top_post: "Top Post"
+  search: "Search"
 
+  time:
+    formats:
+      defaut: "%d/%m/%Y"
+
+  posts:
+    post_details:
+      comment: "Comment:"
+      views: "%{views} lượt xem."
+      send: "Submit"
