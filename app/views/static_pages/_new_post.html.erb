@@ -2,22 +2,22 @@
   <div class="padding-bottom-div">
     <div class="card">
       <div class="container padding-top-div">
+        <%= link_to post_path(n), style: "color: #2b2b2b" do %>
+          <h3 class=""><%= n.title %></h3>
+        <% end %>
+        <p class="lead">
+          by
+          <a href="#">Bog của tui</a>
+        </p>
+        <p><%= l n.created_at, format: :defaut %></p>
+      </div>
+      <div class="container">
         <%= link_to post_path(n), class: "card" do %>
-          <%= image_tag "#{n.image}", class: "card w-100" %>
+          <%= image_tag "#{n.image}", class: "img-fluid rounded" %>
         <% end %>
       </div>
       <div class="container padding-top-div">
-        <div class="row">
-          <div class="col-sm-9">
-            <%= link_to post_path(n), class: "" do %>
-              <h5><%= n.title %></h1>
-            <% end %>
-            <p><%= n.content %></p>
-          </div>
-          <div class="col-sm-3">
-            <p><%= time_ago_in_words(n.created_at) %> trước</p>
-          </div>
-        </div>
+        <p class="text-overflow"><%= n.content %></p>
       </div>
     </div>
   </div>

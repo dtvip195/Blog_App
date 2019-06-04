@@ -3,10 +3,14 @@
     <div class="container-hot-post1">
       <div class="row">
         <div class="col-sm-3">
-          <%= image_tag "#{n.image}", class: "image" %>
+          <%= link_to post_path(n), class: "" do %>
+            <%= image_tag "#{n.image}", class: "image" %>
+          <% end %>
         </div>
         <div class="col-sm-9">
-          <p><%= n.title %></p>
+          <%= link_to post_path(n), style: "color: black" do %>
+            <p><%= n.title %></p>
+          <% end %>
         </div>
       </div>
     </div>
@@ -14,10 +18,14 @@
     <div class="container-hot-post">
       <div class="row">
         <div class="col-sm-3">
-          <%= image_tag "#{n.image}", class: "image" %>
+          <%= link_to post_path(n), class: "" do %>
+            <%= image_tag "#{n.image}", class: "image" %>
+          <% end %>
         </div>
         <div class="col-sm-9">
-          <p><%= n.title %></p>
+          <%= link_to post_path(n), style: "color: black" do %>
+            <p><%= n.title %></p>
+          <% end %>
         </div>
       </div>
     </div>

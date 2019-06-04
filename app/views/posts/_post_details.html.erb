@@ -1,21 +1,87 @@
-<div class="padding-bottom-div">
+<div class="padding-bottom-div" style="padding-top: 24px;">
   <div class="card">
     <div class="container padding-top-div">
       <%= image_tag "#{@post_details.image}", class: "card w-100" %>
     </div>
     <div class="container padding-top-div">
-      <div class="row">
-        <div class="col-sm-9">
-          <h5><%= @post_details.title %></h1>
-          <p><%= @post_details.content %></p>
+      <h3 class=""><%= @post_details.title %></h3>
+      <p class="lead">
+        by
+        <a href="#">Bog của tui</a>
+      </p>
+      <div class="container">
+        <div class="row">
+          <p style="padding-right: 15px;"><%= l @post_details.created_at, format: :defaut %></p>
+          <p><%= t(".views", views: @post_details.views) %></p>
         </div>
-        <div class="col-sm-3">
-          <p>Đăng <%= time_ago_in_words(@post_details.created_at) %> trước.</p>
-          <p><%= @post_details.views %> lượt xem.</p>
+      </div>
+      <p><%= @post_details.content %></p>
+    </div>
+    <div class="container">
+      <div class="card my-4">
+        <h5 class="card-header"><%= t(".comment") %></h5>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><%= t(".submit") %></button>
+          </form>
+        </div>
+      </div>
+      <div class="media mb-4">
+        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+        <div class="media-body">
+          <h5 class="mt-0">Commenter Name</h5>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+          <div class="row">
+            <div style="padding-left: 15px;">
+              <%= link_to t(".unlike"), "#", class: "btn btn-secondary badge badge-pill margin-right", id: "like", method: :delete, remote: true %>
+            </div>
+
+            <%= link_to "#" do%>
+              <i class="material-icons" title="Reply">reply</i>
+            <% end %>
+          </div>
+
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+              <div class="row">
+                <div style="padding-left: 15px;">
+                  <%= link_to t(".like"), "#", class: "btn btn-primary badge badge-pill margin-right",
+                    id: "unlike", method: :post, remote: true %>
+                </div>
+
+                <%= link_to "#" do%>
+                  <i class="material-icons" title="Reply">reply</i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+
+          <div class="media mt-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+            <div class="media-body">
+              <h5 class="mt-0">Commenter Name</h5>
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+              <div class="row">
+                <div style="padding-left: 15px;">
+                  <%= link_to t(".like"), "#", class: "btn btn-primary badge badge-pill margin-right",
+                    id: "unlike", method: :post, remote: true %>
+                </div>
+
+                <%= link_to "#" do%>
+                  <i class="material-icons" title="Reply">reply</i>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
