@@ -16,6 +16,10 @@ vi:
       views: "%{views} lượt xem."
       send: "Submit"
 
+  topics:
+    show:
+      topic_post: "%{topic}: %{posts} bài viết."
+
   devise:
     sessions:
       form:

@@ -134,7 +134,6 @@ body {
 
 .text-overflow{
   white-space: nowrap;
-  width: 500px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -194,4 +193,8 @@ body {
 .dropdown:hover .btn-user {
   color: black;
   background-color: white;
+}
+
+.height_image{
+  height: 230px;
 }

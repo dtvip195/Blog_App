@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_085247) do
+ActiveRecord::Schema.define(version: 2019_06_05_043524) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2019_05_27_085247) do
     t.text "content"
     t.integer "user_id"
     t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string "hashtag"
+    t.integer "clicks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,7 +46,15 @@ ActiveRecord::Schema.define(version: 2019_05_27_085247) do
     t.string "image"
     t.integer "status", default: 0, null: false
     t.integer "topic_id"
+    t.integer "user_id"
     t.integer "views", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts_hashtags", force: :cascade do |t|
+    t.integer "hashtag_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
