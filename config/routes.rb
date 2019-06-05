@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i(show)
   resources :topics, only: %i(show)
+  resources :hashtags, only: %i(show)
 end

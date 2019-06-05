@@ -1,8 +1,8 @@
 vi:
   base_title: "Blog App"
   about_me: "About Me"
-  about_me_details: "Xin chào các bạn đây là Blog của tui. Tui là Tad"
-  follow_me: "Follow Me"
+  about_me_details: "Xin chào các bạn đây là Blog của tui. Tui là "
+  hashtag: "Hashtags"
   top_post: "Top Post"
   search: "Search"
 
@@ -20,13 +20,10 @@ vi:
     show:
       topic_post: "%{topic}: %{posts} bài viết."
 
-  devise:
-    sessions:
-      form:
-        email: "Email:"
-        password: "Password:"
+  hashtags:
+    show:
+      hashtag_post: "%{hashtag}: %{posts} bài viết."
 
-en:
   devise:
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
@@ -45,3 +42,8 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  sessions:
+    form:
+      email: "Email:"
+      password: "Password:"
