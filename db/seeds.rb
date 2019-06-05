@@ -1,3 +1,11 @@
+#Create User
+User.create!(name: "Tran Le Thanh Dat",
+             email: "tranlethanhdat@gmail.com",
+             password: "123456",
+             password_confirmation: "123456",
+             role: 1,
+             avatar: Faker::Avatar.image)
+
 #Create Categories
 Category.create!(name: "Chuyện Coding")
 Category.create!(name: "Hôm nay học gì?")

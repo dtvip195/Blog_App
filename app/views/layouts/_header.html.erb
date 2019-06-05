@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="/">Logo trang web của tui</a>
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-right: 200px;">
     <ul class="nav navbar-nav">
       <% @categories.each do |t| %>
         <li class="nav-item">
@@ -15,5 +15,47 @@
         </li>
       <% end %>
     </ul>
+    <div class="bottom-container">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button type="button" class="btn btn-outline-light btn-user">
+                <%= link_to image_tag("#{current_user.avatar}",
+                  class: "rounded-circle", size: "28"),"#" %>&nbsp;
+                <%= current_user.name %>
+              </button>
+              <div class="dropdown-content">
+                <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
+              </div>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <div class="dropdown">
+              <%= link_to new_user_session_path, class: "btn", style: "background-color: aliceblue;" do %>
+                Login <i class="fas fa-sign-in-alt"></i>
+              <% end %>
+              <div class="dropdown-content">
+                <% if devise_mapping.omniauthable? %>
+                  <% resource_class.omniauth_providers.each do |provider| %>
+                    <% if (OmniAuth::Utils.camelize(provider) == "Facebook") %>
+                      <%= link_to omniauth_authorize_path(resource_name, provider),
+                        class: "fb btn", style: "color: white;" do %>
+                        <i class="fab fa-facebook fa-fw"></i> Login with Facebook
+                      <% end %>
+                    <% else %>
+                      <%= link_to omniauth_authorize_path(resource_name, provider),
+                        class: "google btn", style: "color: white;" do %>
+                        <i class="fab fa-google fa-fw"></i> Login with Google+
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
   </div>
 </nav>
