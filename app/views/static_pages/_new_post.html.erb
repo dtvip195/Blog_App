@@ -7,13 +7,13 @@
         <% end %>
         <p class="lead">
           by
-          <a href="#">Bog của tui</a>
+          <a href="#"><%= n.user.name %></a>
         </p>
         <p><%= l n.created_at, format: :defaut %></p>
       </div>
       <div class="container">
         <%= link_to post_path(n), class: "card" do %>
-          <%= image_tag "#{n.image}", class: "img-fluid rounded" %>
+          <%= image_tag "#{n.image}", class: "img-fluid rounded height_image" %>
         <% end %>
       </div>
       <div class="container padding-top-div">

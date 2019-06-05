@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/search", to: "static_pages#search"
 
   resources :posts, only: %i(show)
+  resources :topics, only: %i(show)
 end

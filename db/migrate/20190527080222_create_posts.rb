@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :image
       t.integer :status, default: 0, null: false
       t.integer :topic_id
+      t.integer :user_id
       t.integer :views, default: 0
 
       t.timestamps
