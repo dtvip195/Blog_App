@@ -13,7 +13,12 @@
     <%= render "header" %>
     <div id="wrapper">
       <%= render "sidebar" %>
-      <%= yield %>
+      <div id="content-wrapper">
+        <div id="errors">
+          <%= render "share/errors" %>
+        </div>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

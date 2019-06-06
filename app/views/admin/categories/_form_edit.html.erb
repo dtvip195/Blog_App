@@ -1,0 +1,6 @@
+<%= form_for [:admin, c], html: {class: "form-inline"}, remote: true do |f| %>
+  <div class="form-group mx-sm-3 mb-2">
+    <%= f.text_field :name, class: "form-control"  %>
+  </div>
+  <%= f.submit t("submit"), class: "btn btn-primary mb-2" %>
+<% end %>
