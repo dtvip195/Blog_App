@@ -8,4 +8,12 @@ Rails.application.routes.draw do
   resources :posts, only: %i(show)
   resources :topics, only: %i(show)
   resources :hashtags, only: %i(show)
+
+  namespace :admin do
+    root "users#index"
+    resources :users
+    resources :categories
+    resources :posts
+    resources :topics
+  end
 end

@@ -23,6 +23,7 @@ gem "rails-i18n"
 gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
+gem "solargraph", group: :development
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate", "~> 3.1.0"
