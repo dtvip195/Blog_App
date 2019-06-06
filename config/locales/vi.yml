@@ -6,6 +6,9 @@ vi:
   top_post: "Top Post"
   search: "Search"
   permission_denide: "Bạn Không Thể Truy Cập"
+  submit: "Submit"
+  edit: "Edit"
+  delete: "Delete"
 
   time:
     formats:
@@ -34,6 +37,10 @@ vi:
         post: "Post"
         topic: "Topic"
     categories:
+      index:
+        list_category: "Danh Sách Category"
+      form:
+        new: "New: "
 
 
   devise:
