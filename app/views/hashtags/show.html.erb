@@ -2,7 +2,19 @@
   <div class="container-home">
     <div class="row">
       <div class="col-sm-8">
-        <%= render "post_details" %>
+        <h5 class="card-header"><%= t(".hashtag_post", hashtag: @hashtag.hashtag,
+        posts: @posts_hashtags.size) %></h5>
+        <% if @posts_hashtags.size > 0 %>
+          <%= render "posts_hashtag" %>
+        <% else %>
+          <div class="padding-bottom-div">
+            <div class="card">
+              <div class="container padding-top-div">
+                <h1>Không có post nào.</h1>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
       <div class="col-sm-4">
         <%= render "share/search" %>

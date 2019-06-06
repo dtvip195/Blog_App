@@ -10,4 +10,5 @@ class Post < ApplicationRecord
   scope :order_new_posts, ->{order created_at: :desc}
   scope :order_views_posts, ->{order views: :desc}
   scope :where_topic_id, ->(id){where topic_id: id}
+  scope :where_hashtag_id, ->(id){where id: id}
 end

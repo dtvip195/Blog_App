@@ -12,5 +12,6 @@ class ApplicationController < ActionController::Base
   def load_data
     @categories = Category.limit(3)
     @hot_post = Post.order_views_posts.limit(10)
+    @hashtags = Hashtag.all
   end
 end

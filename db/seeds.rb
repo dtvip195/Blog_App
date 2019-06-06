@@ -33,6 +33,14 @@ Topic.create!(category_id: "3",
 Topic.create!(category_id: "3",
               name: "Điểm Hẹn Hò Ở Đà Nẵng")
 
+#Create Hashtags
+Hashtag.create!(hashtag: "#coding")
+Hashtag.create!(hashtag: "#tangai")
+Hashtag.create!(hashtag: "#guitar")
+Hashtag.create!(hashtag: "#review")
+Hashtag.create!(hashtag: "#khoahoc")
+Hashtag.create!(hashtag: "#dihoc")
+
 #Create Posts
 3.times do |n|
   content = Faker::Lorem.sentence(100)
@@ -88,4 +96,29 @@ end
                content: content,
                image: "viet-nam.jpg",
                views: "#{n+10}")
+end
+
+3.times do |n|
+  PostsHashtag.create!(hashtag_id: 6,
+                       post_id: "#{n+1}")
+end
+
+6.times do |n|
+  PostsHashtag.create!(hashtag_id: 1,
+                       post_id: "#{n+4}")
+end
+
+6.times do |n|
+  PostsHashtag.create!(hashtag_id: 5,
+                       post_id: "#{n+10}")
+end
+
+3.times do |n|
+  PostsHashtag.create!(hashtag_id: 4,
+                       post_id: "#{n+16}")
+end
+
+3.times do |n|
+  PostsHashtag.create!(hashtag_id: 1,
+                       post_id: "#{n+13}")
 end
