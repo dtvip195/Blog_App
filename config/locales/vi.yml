@@ -5,6 +5,7 @@ vi:
   hashtag: "Hashtags"
   top_post: "Top Post"
   search: "Search"
+  permission_denide: "Bạn Không Thể Truy Cập"
 
   time:
     formats:
@@ -24,6 +25,17 @@ vi:
     show:
       hashtag_post: "%{hashtag}: %{posts} bài viết."
 
+  admin:
+    admin_base:
+      header:
+        logout: "Logout"
+      sidebar:
+        category: "Category"
+        post: "Post"
+        topic: "Topic"
+    categories:
+
+
   devise:
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
@@ -32,6 +44,9 @@ vi:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+      form:
+        email: "Email:"
+        password: "Password:"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
@@ -43,7 +58,3 @@ vi:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
 
-  sessions:
-    form:
-      email: "Email:"
-      password: "Password:"
