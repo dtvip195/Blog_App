@@ -38,7 +38,12 @@ vi:
         topic: "Topic"
     categories:
       index:
-        list_category: "Danh Sách Category"
+        list_category: "List Category"
+      form:
+        new: "New: "
+    topics:
+      index:
+        list_topic: "List Topic"
       form:
         new: "New: "
 

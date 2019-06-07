@@ -1,0 +1,16 @@
+
+<% @topics.each do |t| %>
+  <tr>
+    <td>
+      <div id="name_topic_<%= t.id %>">
+        <%= t.name %>
+      </div>
+      <div id="form_edit_topic_<%= t.id %>">
+      </div>
+    </td>
+    <td><%= t.category.name %></td>
+    <td><%= link_to t("edit"), edit_admin_topic_path(t), remote: true %></td>
+    <td><%= link_to t("delete"), admin_topic_path(t), method: :delete, remote: true,
+    data: { confirm: "Bạn chắc chắn muốn xóa?" } %></td>
+  </tr>
+<% end %>
