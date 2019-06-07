@@ -57,7 +57,7 @@ class Admin::CategoriesController < Admin::AdminBaseController
   def load_category
     @category = Category.find_by id: params[:id]
     return if @category
-    fash[:danger] = "No Data"
+    flash[:danger] = "No Data"
     redirect_to admin_categories_path
   end
 end

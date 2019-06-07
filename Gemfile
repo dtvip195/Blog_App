@@ -30,6 +30,7 @@ gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "pry", "~> 0.12.2"
 end
 
 group :development do

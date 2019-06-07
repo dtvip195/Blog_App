@@ -1,10 +1,10 @@
 <% @categories.each do |c| %>
   <tr>
     <td>
-      <div id="name_<%= c.id %>">
+      <div id="name_category_<%= c.id %>">
         <%= c.name %>
       </div>
-      <div id="form_edit_<%= c.id %>">
+      <div id="form_edit_category_<%= c.id %>">
       </div>
     </td>
     <td><%= link_to t("edit"), edit_admin_category_path(c), remote: true %></td>
