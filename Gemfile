@@ -6,6 +6,7 @@ ruby "2.5.3"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", "~> 4.3.1"
 gem "bootstrap-will_paginate"
+gem "carrierwave"
 gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "devise"

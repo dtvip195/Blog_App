@@ -9,26 +9,24 @@ class Admin::TopicsController < Admin::AdminBaseController
   def create
     @topic = Topic.new topic_params
     if @topic.save
-      @topics = Topic.order(created_at: :desc)
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end
 
   def destroy
     if @topic.destroy
-      @topics = Topic.order(created_at: :desc)
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end
@@ -40,14 +38,13 @@ class Admin::TopicsController < Admin::AdminBaseController
   end
 
   def update
-    @topics = Topic.order(created_at: :desc)
     if @topic.update_attributes topic_params
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end

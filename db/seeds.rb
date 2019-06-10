@@ -48,7 +48,7 @@ Hashtag.create!(hashtag: "#dihoc")
                user_id: 1,
                title: "Chuyện Đi Học Cấp #{n+1}",
                content: content,
-               image: "viet-nam.jpg")
+               image: "image-#{n+1}.jpg")
 end
 3.times do |n|
   content = Faker::Lorem.sentence(100)
@@ -56,7 +56,7 @@ end
                user_id: 1,
                title: "Chuyện Thực Tập FSoft #{n+1}",
                content: content,
-               image: "viet-nam.jpg")
+               image: "image-#{n+4}.jpg")
 end
 3.times do |n|
   content = Faker::Lorem.sentence(100)
@@ -64,7 +64,7 @@ end
                user_id: 1,
                title: "Chuyện Đi Làm Framgia #{n+1}",
                content: content,
-               image: "viet-nam.jpg",
+               image: "image-#{n+1}.jpg",
                views: "#{n+10}")
 end
 3.times do |n|
@@ -73,8 +73,8 @@ end
   Post.create!(topic_id: 4,
                user_id: 1,
                title: title,
+               image: "image-#{n+4}.jpg",
                content: content,
-               image: "viet-nam.jpg",
                views: "#{n+15}")
 end
 3.times do |n|
@@ -83,8 +83,8 @@ end
   Post.create!(topic_id: 5,
                user_id: 1,
                title: title,
+               image: "image-#{n+5}.jpg",
                content: content,
-               image: "viet-nam.jpg",
                views: "#{n+9}")
 end
 3.times do |n|
@@ -93,8 +93,8 @@ end
   Post.create!(topic_id: 7,
                user_id: 1,
                title: title,
+               image: "image-#{n+2}.jpg",
                content: content,
-               image: "viet-nam.jpg",
                views: "#{n+10}")
 end
 

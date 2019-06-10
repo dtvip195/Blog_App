@@ -24,6 +24,10 @@ vi:
     show:
       topic_post: "%{topic}: %{posts} bài viết."
 
+  posts:
+    form_new:
+      format: "image/jpeg,image/gif,image/png"
+
   hashtags:
     show:
       hashtag_post: "%{hashtag}: %{posts} bài viết."
@@ -59,6 +63,8 @@ vi:
       form:
         email: "Email:"
         password: "Password:"
+    failure:
+      invalid: "Invalid %{authentication_keys} or password."
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

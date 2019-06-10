@@ -13,5 +13,7 @@ class ApplicationController < ActionController::Base
     @categories = Category.all
     @hot_post = Post.order_views_posts.limit(10)
     @hashtags = Hashtag.all
+    @topics = Topic.order(created_at: :desc)
+    @posts = Post.order(created_at: :desc)
   end
 end
