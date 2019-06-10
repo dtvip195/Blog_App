@@ -1,0 +1,14 @@
+<% @posts.each do |p| %>
+  <tr>
+    <td><%= p.title %></td>
+    <td><%= p.content %></td>
+    <td><%= p.image %></td>
+    <td><%= p.status %></td>
+    <td><%= p.topic.name %></td>
+    <td><%= p.topic.category.name %></td>
+    <td></td>
+    <td><%= link_to t("edit"), edit_admin_post_path(p) %></td>
+    <td><%= link_to t("delete"), admin_post_path(p), method: :delete, remote: true,
+    data: { confirm: "Bạn chắc chắn muốn xóa?" } %></td>
+  </tr>
+<% end %>

@@ -9,11 +9,11 @@ class Admin::CategoriesController < Admin::AdminBaseController
     @category = Category.new category_params
     if @category.save
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end
@@ -21,11 +21,11 @@ class Admin::CategoriesController < Admin::AdminBaseController
   def destroy
     if @category.destroy
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end
@@ -39,11 +39,11 @@ class Admin::CategoriesController < Admin::AdminBaseController
   def update
     if @category.update_attributes category_params
       respond_to do |format|
-        format.js { flash.now[:success] = "Success" }
+        format.js{flash.now[:success] = "Success"}
       end
     else
       respond_to do |format|
-        format.js { flash.now[:danger] = "Fail" }
+        format.js{flash.now[:danger] = "Fail"}
       end
     end
   end
